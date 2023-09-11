@@ -34,7 +34,7 @@ const skills: TechnicalRecord[] = [
 	<div class="space-y-4">
 		{
 			skills.map((category) => (
-				<div class="flex w-full md:flex-nowrap flex-wrap">
+				<div class="flex w-full flex-wrap md:flex-nowrap">
 					<CategoryChip name={category.name} />
 					{category.items.map((framework) => (
 						<Chip name={framework} />
