@@ -1,0 +1,55 @@
+---
+import Certificates from "../components/Certificates.astro";
+import Education from "../components/Education.astro";
+import Header from "../components/Header.astro";
+import Technical from "../components/Technical.astro";
+import Work from "../components/Work.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="preconnect" href="https://rsms.me/" />
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Hannes Widrig</title>
+	</head>
+	<body>
+		<div class="min-h-screen text-center font-display bg-default">
+			<div class="flex flex-col mx-auto my-0 p-8 max-w-4xl">
+				<Header />
+				<Technical />
+				<Work />
+				<Certificates />
+				<Education />
+			</div>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	body {
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+			Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+			monospace;
+	}
+
+	:root {
+		font-family: "Inter", sans-serif;
+	}
+
+	@supports (font-variation-settings: normal) {
+		:root {
+			font-family: "Inter var", sans-serif;
+		}
+	}
+</style>

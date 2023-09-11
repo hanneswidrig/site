@@ -1,0 +1,43 @@
+---
+type WorkItem = {
+	title: string;
+	companyName: string;
+	companyLocation: string;
+	companyDuration: string;
+};
+
+const jobs: WorkItem[] = [
+	{
+		title: "Senior Software Engineer",
+		companyName: "DMI (Digital Management, LLC)",
+		companyDuration: "April 2021 - Present",
+		companyLocation: "Indianapolis, IN",
+	},
+	{
+		title: "Software Engineer",
+		companyName: "DMI (Digital Management, LLC)",
+		companyDuration: "January 2019 - April 2021",
+		companyLocation: "Indianapolis, IN",
+	},
+];
+---
+
+<div class="mb-8">
+	<h1 class="text-blue text-left text-3xl font-semibold my-4">
+		Work Experience
+	</h1>
+	<div class="space-y-8">
+		{
+			jobs.map((job) => (
+				<div class="flex flex-col p-4 text-left bg-white text-red border border-red drop-shadow-sm">
+					<div class="w-full flex justify-between">
+						<div class="font-semibold text-xl mb-2">{job.title}</div>
+						<div class="text-sm font-medium">{job.companyDuration}</div>
+					</div>
+					<div class="text-sm font-medium">{job.companyName}</div>
+					<div class="text-sm font-medium">{job.companyLocation}</div>
+				</div>
+			))
+		}
+	</div>
+</div>

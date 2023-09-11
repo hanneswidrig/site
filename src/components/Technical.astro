@@ -1,0 +1,46 @@
+---
+import CategoryChip from "./CategoryChip.astro";
+import Chip from "./Chip.astro";
+
+type TechnicalRecord = { name: string; items: string[] };
+
+const skills: TechnicalRecord[] = [
+	{
+		name: "Front-End",
+		items: [
+			"TypeScript",
+			"React",
+			"Svelte",
+			"SolidJS",
+			"Angular",
+			"JavaScript",
+		],
+	},
+	{ name: "Back-End", items: ["TypeScript", "C#", "Go", "Python"] },
+	{ name: "Server", items: ["Node.js", "Deno", "Bun", ".NET 7+"] },
+	{ name: "Cloud", items: ["Azure", "Amazon Web Services", "Docker"] },
+	{
+		name: "Databases",
+		items: ["PostgreSQL", "Microsoft SQL Server", "SQLite"],
+	},
+	{
+		name: "Toolset",
+		items: ["Jetbrains Suite", "VSCode", "Insomnia", "Figma", "Excalidraw"],
+	},
+];
+---
+
+<div class="mb-8">
+	<div class="space-y-4">
+		{
+			skills.map((category) => (
+				<div class="flex w-full md:flex-nowrap flex-wrap">
+					<CategoryChip name={category.name} />
+					{category.items.map((framework) => (
+						<Chip name={framework} />
+					))}
+				</div>
+			))
+		}
+	</div>
+</div>
