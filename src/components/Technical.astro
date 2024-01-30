@@ -1,5 +1,4 @@
 ---
-import CategoryChip from "./CategoryChip.astro";
 import Chip from "./Chip.astro";
 
 type TechnicalRecord = { name: string; items: string[] };
@@ -24,23 +23,22 @@ const skills: TechnicalRecord[] = [
 		items: ["PostgreSQL", "SQLite", "Redis", "Microsoft SQL Server"],
 	},
 	{
-		name: "Toolset",
-		items: ["Jetbrains Suite", "VSCode", "Insomnia", "Figma", "Excalidraw"],
+		name: "Tools",
+		items: ["VSCode", "Excalidraw", "Jetbrains", "Figma"],
 	},
 ];
 ---
 
-<div class="mb-8">
-	<div class="space-y-4">
-		{
-			skills.map((category) => (
-				<div class="flex w-full flex-wrap md:flex-nowrap">
-					<CategoryChip name={category.name} />
-					{category.items.map((framework) => (
-						<Chip name={framework} />
-					))}
-				</div>
-			))
-		}
-	</div>
+<div class="flex flex-col gap-3">
+	{
+		skills.map((category) => (
+			<div class="flex flex-wrap gap-1 md:flex-nowrap">
+				<Chip subject name={category.name} />
+
+				{category.items.map((framework) => (
+					<Chip name={framework} />
+				))}
+			</div>
+		))
+	}
 </div>

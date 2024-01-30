@@ -1,13 +1,19 @@
 ---
 interface Props {
+	subject?: boolean;
 	name: string;
 }
 
-const { name } = Astro.props;
+const { subject, name } = Astro.props;
 ---
 
 <div
-	class="my-1 mr-1 flex border border-green bg-white px-2 py-1 font-medium text-green drop-shadow-sm"
+	class="flex border border-green px-2 py-1"
+	class:list={[
+		subject
+			? "w-full bg-green text-white drop-shadow md:w-32"
+			: "bg-white text-green",
+	]}
 >
 	{name}
 </div>
