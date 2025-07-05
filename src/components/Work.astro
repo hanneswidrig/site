@@ -4,32 +4,43 @@ type WorkItem = {
 	companyName: string;
 	companyLocation: string;
 	companyDuration: string;
+	theme: string;
 };
 
 const jobs: WorkItem[] = [
 	{
 		title: "Senior Software Engineer",
+		companyName: "Re:Build Manufacturing",
+		companyDuration: "March 2025 - Present",
+		companyLocation: "Framingham, MA",
+		theme: "border-(--color-custom-gold) text-(--color-custom-gold)",
+	},
+	{
+		title: "Senior Software Engineer",
 		companyName: "DMI (Digital Management, LLC)",
-		companyDuration: "April 2021 - Present",
+		companyDuration: "April 2021 - March 2025",
 		companyLocation: "Indianapolis, IN",
+		theme: "border-(--color-custom-red) text-(--color-custom-red)",
 	},
 	{
 		title: "Software Engineer",
 		companyName: "DMI (Digital Management, LLC)",
 		companyDuration: "January 2019 - April 2021",
 		companyLocation: "Indianapolis, IN",
+		theme: "border-(--color-custom-red) text-(--color-custom-red)",
 	},
 ];
 ---
 
 <div>
-	<h1 class="text-blue my-4 text-left text-3xl font-semibold">
+	<h1 class="text-(--color-custom-blue) my-4 text-left text-3xl font-semibold">
 		Work Experience
 	</h1>
+
 	<div class="space-y-8">
 		{
 			jobs.map((job) => (
-				<div class="border-red text-red flex flex-col border bg-white p-4 text-left drop-shadow-sm">
+				<div class={`flex flex-col border bg-white p-4 text-left drop-shadow-xs ${job.theme}`}>
 					<div class="flex w-full justify-between">
 						<div class="mb-2 text-xl font-semibold">{job.title}</div>
 						<div class="text-sm font-medium">{job.companyDuration}</div>

@@ -8,11 +8,11 @@ const { subject, name } = Astro.props;
 ---
 
 <div
-	class="border-green flex border px-2 py-1"
+	class="border-(--color-custom-green) flex border px-2 py-1"
 	class:list={[
 		subject
-			? "bg-green w-full text-white drop-shadow md:w-32"
-			: "text-green bg-white",
+			? "bg-(--color-custom-green) w-full text-white drop-shadow-sm md:w-32"
+			: "text-(--color-custom-green) bg-white",
 	]}
 >
 	{name}

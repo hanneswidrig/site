@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+:root {
+	--color-custom-bg: #f6f8ff;
+	--color-custom-red: #cf3b3b;
+	--color-custom-gold: #a17d24;
+	--color-custom-blue: #253d5b;
+	--color-custom-green: #355834;
+	--color-custom-purple: #564d7c;
+}
+
