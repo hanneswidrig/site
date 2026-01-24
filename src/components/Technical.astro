@@ -5,26 +5,28 @@ type TechnicalRecord = { name: string; items: string[] };
 
 const skills: TechnicalRecord[] = [
 	{
-		name: "Front-End",
-		items: [
-			"TypeScript",
-			"React",
-			"Svelte",
-			"SolidJS",
-			"Angular",
-			"JavaScript",
-		],
+		name: "Languages",
+		items: ["TypeScript", "Go", "C#", "Python", "Ruby"],
 	},
-	{ name: "Back-End", items: ["TypeScript", "Go", "C#", "Python", "Ruby"] },
-	{ name: "Server", items: ["Node.js", "Bun", ".NET"] },
-	{ name: "Cloud", items: ["AWS", "Azure"] },
+	{
+		name: "Front-End",
+		items: ["React", "Svelte", "Tailwind CSS"],
+	},
+	{
+		name: "Back-End",
+		items: ["Node.js", "Bun", ".NET"],
+	},
+	{
+		name: "Cloud & DevOps",
+		items: ["AWS", "Azure", "Terraform", "Docker"],
+	},
 	{
 		name: "Databases",
-		items: ["PostgreSQL", "SQLite", "Redis", "Microsoft SQL Server"],
+		items: ["PostgreSQL", "DynamoDB", "Redis"],
 	},
 	{
-		name: "Tools",
-		items: ["VSCode", "Excalidraw", "Jetbrains", "Figma", "Docker", "Git"],
+		name: "Testing",
+		items: ["Vitest", "Playwright"],
 	},
 ];
 ---
