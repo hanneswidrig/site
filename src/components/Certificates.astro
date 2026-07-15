@@ -1,25 +1,36 @@
-<div>
-	<h1 class="text-old-blue my-4 text-left text-3xl font-semibold">
-		Certificates
-	</h1>
-	<div
-		class="border-old-blue text-old-blue flex flex-col border bg-white p-4 text-left drop-shadow-xs"
+---
+const cert = {
+	name: "Azure Developer Associate (AZ-204)",
+	issuer: "Microsoft",
+	duration: "Issued June 2021",
+	href: "https://learn.microsoft.com/api/credentials/share/en-us/HannesWidrig/140F9D41036965EF?sharingId=133A95F302FBCD6D",
+};
+---
+
+<section>
+	<h2
+		class="mb-3 border-b border-black pb-0.5 text-lg tracking-wide uppercase dark:border-white"
 	>
-		<div class="flex items-center justify-between p-4">
-			<span class="text-left text-xl font-semibold">
-				AZ-204 Azure Developer Associate
-			</span>
-			<a
-				href="https://learn.microsoft.com/api/credentials/share/en-us/HannesWidrig/140F9D41036965EF?sharingId=133A95F302FBCD6D"
-				target="_blank"
-			>
-				<img
-					alt="azure logo"
-					src="./assets/azure.svg"
-					class="w-12"
-					loading="eager"
-				/>
-			</a>
+		Certification
+	</h2>
+
+	<div class="text-[1.05rem] leading-snug">
+		<div
+			class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
+		>
+			<p class="font-bold">
+				<span class="mr-2">•</span>
+				<a
+					class="underline decoration-1 underline-offset-2"
+					href={cert.href}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{cert.name}
+				</a>
+			</p>
+			<p class="pl-4 italic sm:pl-0">{cert.duration}</p>
 		</div>
+		<p class="pl-4 italic">{cert.issuer}</p>
 	</div>
-</div>
+</section>

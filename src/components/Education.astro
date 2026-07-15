@@ -1,14 +1,34 @@
-<div>
-	<h1 class="text-old-blue my-4 text-left text-3xl font-semibold">Education</h1>
-	<div
-		class="border-old-purple text-old-purple flex flex-col border bg-white p-4 text-left drop-shadow-xs"
+---
+const education = {
+	degree: "B.S. Computer Science with Systems",
+	school: "Taylor University",
+	location: "Upland, IN",
+	date: "December 2018",
+};
+---
+
+<section>
+	<h2
+		class="mb-3 border-b border-black pb-0.5 text-lg tracking-wide uppercase dark:border-white"
 	>
-		<div class="flex w-full justify-between">
-			<div class="mb-2 text-xl font-semibold">
-				{"B.S. Computer Science w/ Systems"}
-			</div>
+		Education
+	</h2>
+
+	<div class="text-[1.05rem] leading-snug">
+		<div
+			class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
+		>
+			<p class="font-bold">
+				<span class="mr-2">•</span>
+				{education.school}
+			</p>
+			<p class="pl-4 sm:pl-0">{education.location}</p>
 		</div>
-		<div class="text-sm font-medium">{"Taylor University"}</div>
-		<div class="text-sm font-medium">{"Upland, IN"}</div>
+		<div
+			class="flex flex-col pl-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
+		>
+			<p class="italic">{education.degree}</p>
+			<p class="italic">{education.date}</p>
+		</div>
 	</div>
-</div>
+</section>

@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import "../styles/global.css";
 ---
 
@@ -8,9 +9,15 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Hannes Widrig" />
 		<title>Hannes Widrig</title>
+		<Font cssVariable="--font-cmu" preload />
 	</head>
-	<body class="font-display bg-old-bg min-h-screen p-8">
-		<slot />
+	<body
+		class="min-h-screen bg-white p-8 font-serif text-black sm:p-12 dark:bg-black dark:text-white"
+	>
+		<div class="mx-auto max-w-2xl">
+			<slot />
+		</div>
 	</body>
 </html>

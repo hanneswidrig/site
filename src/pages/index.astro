@@ -1,18 +1,18 @@
 ---
 import Certificates from "../components/Certificates.astro";
+import Contact from "../components/Contact.astro";
 import Education from "../components/Education.astro";
 import Header from "../components/Header.astro";
-import Technical from "../components/Technical.astro";
 import Work from "../components/Work.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<div class="mx-auto flex max-w-2xl flex-col gap-8">
+	<div class="flex flex-col gap-8 pb-16">
 		<Header />
-		<Technical />
 		<Work />
 		<Certificates />
 		<Education />
+		<Contact />
 	</div>
 </Layout>

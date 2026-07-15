@@ -4,53 +4,89 @@ type WorkItem = {
 	companyName: string;
 	companyLocation: string;
 	companyDuration: string;
-	theme: string;
+	bullets: string[];
 };
 
 const jobs: WorkItem[] = [
 	{
 		title: "Senior Software Engineer",
-		companyName: "Re:Build Manufacturing",
-		companyDuration: "March 2025 - Present",
+		companyName: "Qualia",
+		companyDuration: "July 2026 – Present",
 		companyLocation: "Remote",
-		theme: "border-old-gold text-old-gold",
+		bullets: [],
 	},
 	{
 		title: "Senior Software Engineer",
-		companyName: "DMI (Digital Management, LLC)",
-		companyDuration: "April 2021 - March 2025",
+		companyName: "Re:Build Manufacturing",
+		companyDuration: "March 2025 – July 2026",
 		companyLocation: "Remote",
-		theme: "border-old-red text-old-red",
+		bullets: [
+			"Built a generative AI application with AWS Bedrock and SvelteKit so stakeholders could rapidly test new intelligence capabilities.",
+			"Modernized a legacy React codebase with TanStack and Tailwind, reducing technical debt and speeding feature delivery.",
+			"Engineered a high-performance 3D CNC visualization with Three.js and React Three Fiber for real-time toolpath verification.",
+		],
+	},
+	{
+		title: "Senior Software Engineer",
+		companyName: "DMI",
+		companyDuration: "April 2021 – March 2025",
+		companyLocation: "Remote",
+		bullets: [
+			"Architected a real-time TypeScript WebSocket CDK construct (S3, DynamoDB, API Gateway) that improved performance of a critical financial reporting system by more than 90%.",
+			"Rewrote a fragmented document generation system as a TypeScript Node.js microservice on AWS, cutting modification time from weeks to hours.",
+			"Pioneered a React micro-frontend within an Angular ecosystem so agents could access essential business documents at scale.",
+		],
 	},
 	{
 		title: "Software Engineer",
-		companyName: "DMI (Digital Management, LLC)",
-		companyDuration: "January 2019 - April 2021",
+		companyName: "DMI",
+		companyDuration: "January 2019 – April 2021",
 		companyLocation: "Remote",
-		theme: "border-old-red text-old-red",
+		bullets: [
+			"Accelerated a multi-year Angular and C#/.NET program as lead engineer, owning ongoing delivery and mentoring offshore developers.",
+			"Implemented full-stack components of a large event-driven AWS microservice architecture with Angular micro-frontends across multiple teams.",
+			"Delivered two high-priority React frontends ahead of schedule as the sole frontend developer.",
+		],
 	},
 ];
 ---
 
-<div>
-	<h1 class="text-old-blue my-4 text-left text-3xl font-semibold">
-		Work Experience
-	</h1>
+<section>
+	<h2
+		class="mb-3 border-b border-black pb-0.5 text-lg tracking-wide uppercase dark:border-white"
+	>
+		Experience
+	</h2>
 
-	<div class="space-y-8">
+	<ul class="flex list-none flex-col gap-4">
 		{
 			jobs.map((job) => (
-				<div
-					class={`flex flex-col border bg-white p-4 text-left drop-shadow-xs ${job.theme}`}
-				>
-					<div class="flex w-full justify-between">
-						<div class="mb-2 text-xl font-semibold">{job.title}</div>
-						<div class="text-sm font-medium">{job.companyDuration}</div>
+				<li class="text-[1.05rem] leading-snug">
+					<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+						<p class="font-bold">
+							<span class="mr-2">•</span>
+							{job.companyName}
+						</p>
+						<p class="pl-4 sm:pl-0">{job.companyLocation}</p>
 					</div>
-					<div class="text-sm font-medium">{job.companyName}</div>
-					<div class="text-sm font-medium">{job.companyLocation}</div>
-				</div>
+					<div class="flex flex-col pl-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+						<p class="italic">{job.title}</p>
+						<p class="italic">{job.companyDuration}</p>
+					</div>
+					{job.bullets.length > 0 && (
+						<ul class="mt-1 flex list-none flex-col gap-1 pl-4">
+							{job.bullets.map((bullet) => (
+								<li class="flex gap-2">
+									<span class="shrink-0" aria-hidden="true">
+										◦
+									</span>
+									<span>{bullet}</span>
+								</li>
+							))}
+						</ul>
+					)}
+				</li>
 			))
 		}
-	</div>
-</div>
+	</ul>
+</section>

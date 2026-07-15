@@ -1,15 +1,29 @@
 ---
 const job_title = "Senior Software Engineer";
-const job_href = "https://rebuildmanufacturing.com/";
+const job_href = "https://qualia.com";
+
+const intro =
+	"I build clear, maintainable systems by thoughtfully leveraging AI coding agents to amplify my capabilities without sacrificing long-term quality or velocity. Grounded in strong engineering fundamentals and genuine ownership of the systems I create, I deliver high-impact work through collaborative problem-solving that values diverse perspectives and lasting results.";
 ---
 
-<div class="text-old-blue flex flex-col text-left">
-	<h1 class="pt-6 text-3xl font-bold">Hannes Widrig</h1>
-	<div>
-		<span class="font-medium">{job_title}</span>
-		<span>at</span>
-		<a class="underline" href={job_href} target="_blank"
-			>Re:Build Manufacturing</a
-		>
+<header class="flex flex-col gap-8 text-left">
+	<div class="flex flex-col gap-1">
+		<h1 class="text-[2rem] leading-tight font-bold sm:text-[2.35rem]">
+			Hannes Widrig
+		</h1>
+		<p class="text-[1.05rem]">
+			<span class="italic">{job_title}</span>
+			<span> at </span>
+			<a
+				class="font-bold underline decoration-1 underline-offset-2"
+				href={job_href}
+				target="_blank"
+				rel="noopener noreferrer">Qualia</a
+			>
+		</p>
 	</div>
-</div>
+
+	<p class="text-[1.05rem] leading-snug">
+		{intro}
+	</p>
+</header>
