@@ -10,15 +10,15 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.3.3",
-		"astro": "7.1.0",
+		"astro": "7.2.2",
 		"computer-modern": "^0.1.3",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^7.0.2"
 	},
 	"devDependencies": {
-		"prettier": "^3.9.5",
+		"prettier": "^3.9.6",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-tailwindcss": "^0.8.1"
 	},
-	"packageManager": "pnpm@11.13.1"
+	"packageManager": "pnpm@11.21.0"
 }
