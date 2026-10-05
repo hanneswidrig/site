@@ -52,41 +52,37 @@ const jobs: WorkItem[] = [
 ---
 
 <section>
-	<h2
-		class="mb-3 border-b border-black pb-0.5 text-lg tracking-wide uppercase dark:border-white"
-	>
+	<h2 class="mb-3 border-b border-black pb-0.5 text-lg tracking-wide uppercase dark:border-white">
 		Experience
 	</h2>
 
 	<ul class="flex list-none flex-col gap-4">
-		{
-			jobs.map((job) => (
-				<li class="text-[1.05rem] leading-snug">
-					<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-						<p class="font-bold">
-							<span class="mr-2">•</span>
-							{job.companyName}
-						</p>
-						<p class="pl-4 sm:pl-0">{job.companyLocation}</p>
-					</div>
-					<div class="flex flex-col pl-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-						<p class="italic">{job.title}</p>
-						<p class="italic">{job.companyDuration}</p>
-					</div>
-					{job.bullets.length > 0 && (
-						<ul class="mt-1 flex list-none flex-col gap-1 pl-4">
-							{job.bullets.map((bullet) => (
-								<li class="flex gap-2">
-									<span class="shrink-0" aria-hidden="true">
-										◦
-									</span>
-									<span>{bullet}</span>
-								</li>
-							))}
-						</ul>
-					)}
-				</li>
-			))
-		}
+		{jobs.map((job) => (
+			<li class="text-[1.05rem] leading-snug">
+				<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+					<p class="font-bold">
+						<span class="mr-2">•</span>
+						{job.companyName}
+					</p>
+					<p class="pl-4 sm:pl-0">{job.companyLocation}</p>
+				</div>
+				<div class="flex flex-col pl-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+					<p class="italic">{job.title}</p>
+					<p class="italic">{job.companyDuration}</p>
+				</div>
+				{job.bullets.length > 0 && (
+					<ul class="mt-1 flex list-none flex-col gap-1 pl-4">
+						{job.bullets.map((bullet) => (
+							<li class="flex gap-2">
+								<span class="shrink-0" aria-hidden="true">
+									◦
+								</span>
+								<span>{bullet}</span>
+							</li>
+						))}
+					</ul>
+				)}
+			</li>
+		))}
 	</ul>
 </section>
